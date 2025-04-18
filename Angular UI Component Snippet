@@ -1,0 +1,24 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-vortex-button',
+  template: `<button class="vortex-btn">{{label}}</button>`,
+  styles: [`
+    .vortex-btn {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .vortex-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(146, 141, 171, 0.6);
+    }
+  `]
+})
+export class VortexButtonComponent {
+  @Input() label: string = 'Click Me';
+}
